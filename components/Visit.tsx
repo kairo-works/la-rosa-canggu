@@ -6,7 +6,7 @@ export default function Visit() {
   return (
     <section id="visit" className="relative bg-[#F6E8D8] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-7xl">
-        <p className="smallcaps text-[11px] text-[#93331F]">Visit</p>
+        <p className="smallcaps text-[11px] text-[#A84A12]">Visit</p>
         <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#2B211C] sm:text-5xl">
           On the sand,
           <br />
@@ -26,7 +26,7 @@ export default function Visit() {
               href="https://www.openstreetmap.org/search?query=La%20Rosa%20Canggu%2C%20Jl.%20Pantai%20Batu%20Bolong%2C%20Canggu"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block text-base font-bold text-[#2B211C] transition-colors hover:text-[#93331F]"
+              className="mt-4 inline-block text-base font-bold text-[#2B211C] transition-colors hover:text-[#A84A12]"
             >
               See the area <span aria-hidden="true">&rarr;</span>
             </a>
@@ -52,7 +52,7 @@ export default function Visit() {
                 href="https://wa.me/6287817661749"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-[#93331F] hover:underline"
+                className="font-bold text-[#A84A12] hover:underline"
               >
                 +62 878-1766-1749
               </a>
@@ -61,7 +61,7 @@ export default function Visit() {
                 href="https://www.instagram.com/larosa_canggu_"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-[#93331F] hover:underline"
+                className="font-bold text-[#A84A12] hover:underline"
               >
                 @larosa_canggu_
               </a>
