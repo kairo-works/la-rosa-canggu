@@ -7,7 +7,7 @@ export default function About() {
     <section id="about" className="relative bg-[#FBF6EF] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-2">
         <div>
-          <p className="smallcaps text-[11px] text-[#93331F]">About</p>
+          <p className="smallcaps text-[11px] text-[#A84A12]">About</p>
           <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#2B211C] sm:text-5xl">
             A beach table,
             <br />
@@ -27,7 +27,7 @@ export default function About() {
           </p>
           <a
             href="#gallery"
-            className="mt-8 inline-block text-base font-bold text-[#2B211C] transition-colors hover:text-[#93331F]"
+            className="mt-8 inline-block text-base font-bold text-[#2B211C] transition-colors hover:text-[#A84A12]"
           >
             See the beach and the drinks <span aria-hidden="true">&rarr;</span>
           </a>
