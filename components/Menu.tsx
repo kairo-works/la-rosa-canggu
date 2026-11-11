@@ -52,14 +52,14 @@ const DISHES = [
 
 export default function Menu() {
   return (
-    <section id="menu" className="relative bg-[#122E30] px-5 py-24 sm:px-8 sm:py-32">
+    <section id="menu" className="relative bg-[#0D2B1E] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="frame-brackets mx-auto max-w-3xl px-2 text-center sm:px-6">
-          <p className="smallcaps text-[11px] text-[#E3A83B]">Menu</p>
-          <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#FBF6EF] sm:text-5xl">
+          <p className="smallcaps text-[11px] text-[#D4A24E]">Menu</p>
+          <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#F5F1E8] sm:text-5xl">
             From the kitchen &amp; the bar
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm font-light leading-relaxed text-[#FBF6EF]/75 sm:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm font-light leading-relaxed text-[#F5F1E8]/75 sm:text-base">
             The dishes below are the ones La Rosa lists on its own page.
             Prices are on the board at the beach and change with the day —
             message us on WhatsApp for today&rsquo;s menu.
@@ -86,7 +86,7 @@ export default function Menu() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-xs font-light tracking-[0.14em] text-[#FBF6EF]/60">
+        <p className="mt-10 text-center text-xs font-light tracking-[0.14em] text-[#F5F1E8]/60">
           Prices are approximate — the full drinks list is on the board at
           the beach.
         </p>
