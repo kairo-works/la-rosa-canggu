@@ -36,14 +36,14 @@ export default function Booking() {
   };
 
   return (
-    <section id="book" className="relative bg-[#122E30] px-5 py-24 sm:px-8 sm:py-32">
+    <section id="book" className="relative bg-[#10291F] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-7xl">
-        <p className="smallcaps text-[11px] text-[#E3A83B]">Book a table</p>
+        <p className="smallcaps text-[11px] text-[#D4A24E]">Book a table</p>
         <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
-          <h2 className="font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#FBF6EF] sm:text-5xl">
+          <h2 className="font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#F5F1E8] sm:text-5xl">
             Book a table for sunset
           </h2>
-          <p className="max-w-md text-base text-[#FBF6EF]/75">
+          <p className="max-w-md text-base text-[#F5F1E8]/75">
             We reply on WhatsApp within the day.
           </p>
         </div>
@@ -62,11 +62,11 @@ export default function Booking() {
 
           <form
             onSubmit={onSubmit}
-            className="grid content-start gap-4 bg-[#F6E8D8] p-8 sm:p-12"
+            className="grid content-start gap-4 bg-[#143A29] p-8 sm:p-12"
             noValidate
           >
             <div>
-              <label htmlFor="f-name" className="mb-1.5 block font-bold text-[#2B211C]">
+              <label htmlFor="f-name" className="mb-1.5 block font-bold text-[#F5F1E8]">
                 Name
               </label>
               <input
@@ -75,13 +75,13 @@ export default function Booking() {
                 autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#A84A12] focus:ring-2 focus:ring-[#A84A12]/40"
+                className="min-h-[48px] w-full border border-white/15 bg-[#0D2B1E] px-3.5 py-3 text-base text-[#F5F1E8] outline-none focus:border-[#2E9E5B] focus:ring-2 focus:ring-[#2E9E5B]/40"
               />
             </div>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <label htmlFor="f-date" className="mb-1.5 block font-bold text-[#2B211C]">
+                <label htmlFor="f-date" className="mb-1.5 block font-bold text-[#F5F1E8]">
                   Date
                 </label>
                 <input
@@ -91,11 +91,11 @@ export default function Booking() {
                   placeholder="e.g. Friday 14 November"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#A84A12] focus:ring-2 focus:ring-[#A84A12]/40"
+                  className="min-h-[48px] w-full border border-white/15 bg-[#0D2B1E] px-3.5 py-3 text-base text-[#F5F1E8] outline-none focus:border-[#2E9E5B] focus:ring-2 focus:ring-[#2E9E5B]/40"
                 />
               </div>
               <div>
-                <label htmlFor="f-guests" className="mb-1.5 block font-bold text-[#2B211C]">
+                <label htmlFor="f-guests" className="mb-1.5 block font-bold text-[#F5F1E8]">
                   Guests
                 </label>
                 <input
@@ -106,13 +106,13 @@ export default function Booking() {
                   placeholder="e.g. 2"
                   value={guests}
                   onChange={(e) => setGuests(e.target.value)}
-                  className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#A84A12] focus:ring-2 focus:ring-[#A84A12]/40"
+                  className="min-h-[48px] w-full border border-white/15 bg-[#0D2B1E] px-3.5 py-3 text-base text-[#F5F1E8] outline-none focus:border-[#2E9E5B] focus:ring-2 focus:ring-[#2E9E5B]/40"
                 />
               </div>
             </div>
 
             {error && (
-              <p role="alert" className="text-sm font-semibold text-[#A84A12]">
+              <p role="alert" className="text-sm font-semibold text-[#D4A24E]">
                 {error}
               </p>
             )}
@@ -120,16 +120,16 @@ export default function Booking() {
             <div className="mt-2">
               <button
                 type="submit"
-                className="inline-flex min-h-[52px] items-center justify-center bg-[#A84A12] px-8 py-3.5 text-base font-bold text-white transition-colors duration-300 hover:bg-[#7E3608]"
+                className="inline-flex min-h-[52px] items-center justify-center bg-[#2E9E5B] px-8 py-3.5 text-base font-bold text-white transition-colors duration-300 hover:bg-[#D4A24E] hover:text-[#0A1F16]"
               >
                 Book on WhatsApp
               </button>
             </div>
 
-            <p role="status" className="min-h-6 text-base font-bold text-[#2B211C]">
+            <p role="status" className="min-h-6 text-base font-bold text-[#F5F1E8]">
               {status}
             </p>
-            <p className="text-sm leading-relaxed text-[#6D5A4E]">
+            <p className="text-sm leading-relaxed text-[#9DB8A6]">
               Or message us directly on WhatsApp: +62 878-1766-1749. Sunset
               tables go first — book ahead for the 5–7pm window.
             </p>
