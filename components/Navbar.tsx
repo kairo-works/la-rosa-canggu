@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top" className="flex items-baseline gap-2" aria-label="La Rosa Canggu — home">
-          <span className="flex h-9 w-9 items-center justify-center bg-[#B4432F] font-display text-xl font-bold text-[#FBF6EF]">
+          <span className="flex h-9 w-9 items-center justify-center bg-[#DE6B1F] font-display text-xl font-bold text-[#FBF6EF]">
             L
           </span>
           <span className={`font-display text-xl font-bold sm:text-2xl ${text}`}>
@@ -50,14 +50,14 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className={`smallcaps text-[11px] transition-colors duration-500 hover:text-[#B4432F] ${scrolled ? "text-[#2B211C]/80" : "text-[#FBF6EF]/80"}`}
+              className={`smallcaps text-[11px] transition-colors duration-500 hover:text-[#DE6B1F] ${scrolled ? "text-[#2B211C]/80" : "text-[#FBF6EF]/80"}`}
             >
               {l.label}
             </a>
           ))}
           <a
             href="#book"
-            className="inline-flex min-h-[44px] items-center justify-center bg-[#93331F] px-5 py-2 text-sm font-bold text-white transition-colors duration-300 hover:bg-[#752713]"
+            className="inline-flex min-h-[44px] items-center justify-center bg-[#A84A12] px-5 py-2 text-sm font-bold text-white transition-colors duration-300 hover:bg-[#7E3608]"
           >
             Book a table
           </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <a
             href="#book"
             onClick={() => setOpen(false)}
-            className="mt-4 flex min-h-[52px] items-center justify-center bg-[#93331F] px-5 font-bold text-white"
+            className="mt-4 flex min-h-[52px] items-center justify-center bg-[#A84A12] px-5 font-bold text-white"
           >
             Book a table
           </a>
