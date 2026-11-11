@@ -87,6 +87,10 @@ export default function HeroVideo() {
 
     if (isMobile) {
       // Mobile: autoplay + loop, never scrub (iOS Safari blanks paused scrub).
+      // The mobile hero is one screen tall, so there is no ScrollTrigger
+      // and no headline cycling — the intro stays visible and the user
+      // reaches the Menu after one screen instead of 4.5 screens of
+      // looping video.
       video.loop = true;
       const tryPlay = () => {
         video.play().catch(() => {
@@ -101,14 +105,19 @@ export default function HeroVideo() {
       window.addEventListener("touchstart", onGesture, { once: true });
       // Keep the listeners registered for cleanup tracking.
       (video as unknown as { __gesture?: () => void }).__gesture = onGesture;
+      return () => {
+        video.removeEventListener("loadedmetadata", onMeta);
+      };
     }
+
+    // Desktop only: 450vh scroll-scrubbed hero with headline cycling.
 
     const ctx = gsap.context(() => {
       scrollState.trigger = ScrollTrigger.create({
         trigger: section,
         start: "top top",
         end: "bottom bottom",
-        scrub: isMobile ? true : 0.6,
+        scrub: 0.6,
         onUpdate: (self) => {
           const p = self.progress;
 
@@ -146,11 +155,11 @@ export default function HeroVideo() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative h-[450vh] bg-[#2B211C]"
+      className="relative h-[100svh] bg-[#0E2426] md:h-[450vh]"
       aria-label="La Rosa Canggu — cinematic scroll"
     >
-      {/* Sticky stage */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      {/* Sticky stage — one screen on mobile, pinned 450vh scroll on desktop */}
+      <div className="sticky top-0 h-[100svh] w-full overflow-hidden md:h-screen">
         <video
           ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
@@ -170,7 +179,7 @@ export default function HeroVideo() {
           ref={introRef}
           className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
         >
-          <p className="smallcaps text-[11px] text-[#D4694F] sm:text-xs">
+          <p className="smallcaps text-[11px] text-[#E3A83B] sm:text-xs">
             Beach-side restaurant &amp; bar — Batu Bolong Beach, Canggu
           </p>
           <h1 className="mt-5 font-display text-5xl font-light leading-none tracking-[0.12em] text-[#FBF6EF] sm:text-7xl md:text-8xl">
@@ -185,7 +194,7 @@ export default function HeroVideo() {
             <span className="smallcaps text-[10px] text-[#FBF6EF]/60">
               Scroll
             </span>
-            <span className="block h-10 w-px bg-gradient-to-b from-[#D4694F] to-transparent" />
+            <span className="block h-10 w-px bg-gradient-to-b from-[#E3A83B] to-transparent" />
           </div>
         </div>
 
