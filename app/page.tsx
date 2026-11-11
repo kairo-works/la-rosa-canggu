@@ -14,8 +14,8 @@ import CustomCursor from "@/components/CustomCursor";
 const Menu = dynamic(() => import("@/components/Menu"), {
   ssr: true,
   loading: () => (
-    <div className="flex h-96 items-center justify-center bg-[#122E30]">
-      <span className="smallcaps text-[11px] text-[#E3A83B]/70">
+    <div className="flex h-96 items-center justify-center bg-[#0D2B1E]">
+      <span className="smallcaps text-[11px] text-[#D4A24E]/70">
         Loading the menu…
       </span>
     </div>
@@ -24,7 +24,7 @@ const Menu = dynamic(() => import("@/components/Menu"), {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#FBF6EF] text-[#2B211C]">
+    <main className="relative min-h-screen bg-[#0A1F16] text-[#F5F1E8]">
       <CustomCursor />
       <div className="grain-overlay" aria-hidden="true" />
       <Navbar />
