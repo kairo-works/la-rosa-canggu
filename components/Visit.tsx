@@ -22,14 +22,6 @@ export default function Visit() {
               <br />
               Canggu 80361, Bali
             </p>
-            <a
-              href="https://www.openstreetmap.org/search?query=La%20Rosa%20Canggu%2C%20Jl.%20Pantai%20Batu%20Bolong%2C%20Canggu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block text-base font-bold text-[#F5F1E8] transition-colors hover:text-[#43B581]"
-            >
-              See the area <span aria-hidden="true">&rarr;</span>
-            </a>
 
             <dl className="mt-8">
               <div className="flex justify-between gap-3 border-t border-white/10 py-3 text-[17px]">
@@ -37,14 +29,6 @@ export default function Visit() {
                 <dd className="m-0 tabular-nums">07:00 – 24:00</dd>
               </div>
             </dl>
-
-            <p className="mt-6 text-base leading-relaxed text-[#9DB8A6]">
-              Breakfast after a morning surf, a long lunch, then cocktails
-              as the sun drops — the sun sets around 6pm all year in Bali,
-              and La Rosa&rsquo;s tables face straight at it. Batu Bolong is
-              Canggu&rsquo;s mellow, longboard-friendly surf beach, so the
-              sand in front of the restaurant is busy from first light.
-            </p>
 
             <p className="mt-6 text-base leading-relaxed text-[#F5F1E8]">
               WhatsApp{" "}
