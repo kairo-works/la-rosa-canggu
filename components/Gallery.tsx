@@ -23,14 +23,14 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap items-baseline justify-between gap-6">
           <div>
-            <p className="smallcaps text-[11px] text-[#93331F]">Gallery</p>
+            <p className="smallcaps text-[11px] text-[#A84A12]">Gallery</p>
             <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#2B211C] sm:text-5xl">
               The beach, the bar, the sunset
             </h2>
           </div>
           <a
             href="#book"
-            className="text-base font-bold text-[#2B211C] transition-colors hover:text-[#93331F]"
+            className="text-base font-bold text-[#2B211C] transition-colors hover:text-[#A84A12]"
           >
             Book a table <span aria-hidden="true">&rarr;</span>
           </a>
