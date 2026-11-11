@@ -21,20 +21,10 @@ export default function Gallery() {
   return (
     <section id="gallery" className="relative bg-[#0E241B] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-wrap items-baseline justify-between gap-6">
-          <div>
-            <p className="smallcaps text-[11px] text-[#D4A24E]">Gallery</p>
-            <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#F5F1E8] sm:text-5xl">
-              The beach, the bar, the sunset
-            </h2>
-          </div>
-          <a
-            href="#book"
-            className="text-base font-bold text-[#F5F1E8] transition-colors hover:text-[#43B581]"
-          >
-            Book a table <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+        <p className="smallcaps text-[11px] text-[#D4A24E]">Gallery</p>
+        <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#F5F1E8] sm:text-5xl">
+          The beach, the bar, the sunset
+        </h2>
 
         <div className="relative mt-12 aspect-[16/9] w-full overflow-hidden">
           <Image
