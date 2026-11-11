@@ -24,6 +24,15 @@ const RANGES = [
   { start: 0.85, end: 1.0 },
 ];
 
+// Mobile headline ranges: wider than desktop so each line stays legible
+// for about half a screen of scrolling on the 225vh hero.
+const MOBILE_RANGES = [
+  { start: 0.12, end: 0.34 },
+  { start: 0.34, end: 0.56 },
+  { start: 0.56, end: 0.78 },
+  { start: 0.78, end: 1.0 },
+];
+
 const LINES = [
   "FRESH OFF THE GRILL",
   "SERVED WITH AN OCEAN VIEW",
@@ -87,10 +96,10 @@ export default function HeroVideo() {
 
     if (isMobile) {
       // Mobile: autoplay + loop, never scrub (iOS Safari blanks paused scrub).
-      // The mobile hero is one screen tall, so there is no ScrollTrigger
-      // and no headline cycling — the intro stays visible and the user
-      // reaches the Menu after one screen instead of 4.5 screens of
-      // looping video.
+      // The mobile hero is 225vh — half of Golestan's 450vh ("50" on the
+      // user's 0–100 scale). The video keeps playing while the ScrollTrigger
+      // below cycles the overlay headlines as the user scrolls, so the hero
+      // still tells the story instead of being one silent screen.
       video.loop = true;
       const tryPlay = () => {
         video.play().catch(() => {
@@ -105,7 +114,39 @@ export default function HeroVideo() {
       window.addEventListener("touchstart", onGesture, { once: true });
       // Keep the listeners registered for cleanup tracking.
       (video as unknown as { __gesture?: () => void }).__gesture = onGesture;
+
+      // Headline cycling on mobile: scroll-driven opacity only, the video
+      // itself is never scrubbed. Wider ranges than desktop so each line
+      // stays legible for about half a screen of scrolling.
+      const ctx = gsap.context(() => {
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 0.6,
+          onUpdate: (self) => {
+            const p = self.progress;
+
+            // Overlay headlines (mobile ranges).
+            lineRefs.current.forEach((el, i) => {
+              if (!el) return;
+              const o = opacityFor(p, MOBILE_RANGES[i].start, MOBILE_RANGES[i].end);
+              el.style.opacity = String(o);
+              el.style.transform = `translateY(${(1 - o) * 24}px)`;
+            });
+
+            // Intro fades out in the first 12% of the scroll.
+            if (introRef.current) {
+              const o = p < 0.08 ? 1 : p < 0.12 ? 1 - (p - 0.08) / 0.04 : 0;
+              introRef.current.style.opacity = String(Math.max(0, o));
+              introRef.current.style.transform = `translateY(${-p * 60}px)`;
+            }
+          },
+        });
+      }, section);
+
       return () => {
+        ctx.revert();
         video.removeEventListener("loadedmetadata", onMeta);
       };
     }
@@ -155,10 +196,10 @@ export default function HeroVideo() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative h-[100svh] bg-[#0A1F16] md:h-[450vh]"
+      className="relative h-[225vh] bg-[#0A1F16] md:h-[450vh]"
       aria-label="La Rosa Canggu — cinematic scroll"
     >
-      {/* Sticky stage — one screen on mobile, pinned 450vh scroll on desktop */}
+      {/* Sticky stage — 225vh scroll on mobile, pinned 450vh scroll on desktop */}
       <div className="sticky top-0 h-[100svh] w-full overflow-hidden md:h-screen">
         <video
           ref={videoRef}
