@@ -14,8 +14,8 @@ import CustomCursor from "@/components/CustomCursor";
 const Menu = dynamic(() => import("@/components/Menu"), {
   ssr: true,
   loading: () => (
-    <div className="flex h-96 items-center justify-center bg-white">
-      <span className="smallcaps text-[11px] text-[#93331F]/60">
+    <div className="flex h-96 items-center justify-center bg-[#122E30]">
+      <span className="smallcaps text-[11px] text-[#E3A83B]/70">
         Loading the menu…
       </span>
     </div>
