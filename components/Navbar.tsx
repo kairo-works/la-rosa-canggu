@@ -21,26 +21,26 @@ export default function Navbar() {
   }, []);
 
   // Over the dark hero video the text is cream; once scrolled the bar
-  // turns solid sand and the text turns ink.
-  const text = scrolled ? "text-[#2B211C]" : "text-[#FBF6EF]";
+  // turns solid dark money-green.
+  const text = "text-[#F5F1E8]";
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-out ${
         scrolled
-          ? "border-b border-[#E5D3C0] bg-[#FBF6EF]/95 backdrop-blur-md"
+          ? "border-b border-white/10 bg-[#0A1F16]/95 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top" className="flex items-baseline gap-2" aria-label="La Rosa Canggu — home">
-          <span className="flex h-9 w-9 items-center justify-center bg-[#DE6B1F] font-display text-xl font-bold text-[#FBF6EF]">
+          <span className="flex h-9 w-9 items-center justify-center bg-[#2E9E5B] font-display text-xl font-bold text-[#0A1F16]">
             L
           </span>
           <span className={`font-display text-xl font-bold sm:text-2xl ${text}`}>
             La Rosa
           </span>
-          <span className={`hidden text-[11px] font-semibold uppercase tracking-[0.2em] sm:inline ${scrolled ? "text-[#6D5A4E]" : "text-[#FBF6EF]/70"}`}>
+          <span className={`hidden text-[11px] font-semibold uppercase tracking-[0.2em] sm:inline ${scrolled ? "text-[#9DB8A6]" : "text-[#F5F1E8]/70"}`}>
             Canggu
           </span>
         </a>
@@ -50,14 +50,14 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className={`smallcaps text-[11px] transition-colors duration-500 hover:text-[#DE6B1F] ${scrolled ? "text-[#2B211C]/80" : "text-[#FBF6EF]/80"}`}
+              className={`smallcaps text-[11px] transition-colors duration-500 hover:text-[#43B581] ${scrolled ? "text-[#F5F1E8]/80" : "text-[#F5F1E8]/80"}`}
             >
               {l.label}
             </a>
           ))}
           <a
             href="#book"
-            className="inline-flex min-h-[44px] items-center justify-center bg-[#A84A12] px-5 py-2 text-sm font-bold text-white transition-colors duration-300 hover:bg-[#7E3608]"
+            className="inline-flex min-h-[44px] items-center justify-center bg-[#2E9E5B] px-5 py-2 text-sm font-bold text-white transition-colors duration-300 hover:bg-[#D4A24E] hover:text-[#0A1F16]"
           >
             Book a table
           </a>
@@ -72,9 +72,9 @@ export default function Navbar() {
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={`block h-[2px] w-[22px] ${scrolled ? "bg-[#2B211C]" : "bg-[#FBF6EF]"}`} />
-          <span className={`block h-[2px] w-[22px] ${scrolled ? "bg-[#2B211C]" : "bg-[#FBF6EF]"}`} />
-          <span className={`block h-[2px] w-[22px] ${scrolled ? "bg-[#2B211C]" : "bg-[#FBF6EF]"}`} />
+          <span className="block h-[2px] w-[22px] bg-[#F5F1E8]" />
+          <span className="block h-[2px] w-[22px] bg-[#F5F1E8]" />
+          <span className="block h-[2px] w-[22px] bg-[#F5F1E8]" />
         </button>
       </nav>
 
@@ -82,7 +82,7 @@ export default function Navbar() {
       {open && (
         <nav
           id="mobile-nav"
-          className="border-t border-[#E5D3C0] bg-[#FBF6EF] px-5 pb-4 pt-2 md:hidden"
+          className="border-t border-white/10 bg-[#0A1F16] px-5 pb-4 pt-2 md:hidden"
           aria-label="Mobile"
         >
           {LINKS.map((l) => (
@@ -90,7 +90,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block border-b border-[#E5D3C0] py-3 font-semibold text-[#2B211C]"
+              className="block border-b border-white/10 py-3 font-semibold text-[#F5F1E8]"
             >
               {l.label}
             </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <a
             href="#book"
             onClick={() => setOpen(false)}
-            className="mt-4 flex min-h-[52px] items-center justify-center bg-[#A84A12] px-5 font-bold text-white"
+            className="mt-4 flex min-h-[52px] items-center justify-center bg-[#2E9E5B] px-5 font-bold text-white transition-colors hover:bg-[#D4A24E] hover:text-[#0A1F16]"
           >
             Book a table
           </a>
