@@ -155,7 +155,7 @@ export default function HeroVideo() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative h-[100svh] bg-[#0E2426] md:h-[450vh]"
+      className="relative h-[100svh] bg-[#0A1F16] md:h-[450vh]"
       aria-label="La Rosa Canggu — cinematic scroll"
     >
       {/* Sticky stage — one screen on mobile, pinned 450vh scroll on desktop */}
@@ -179,22 +179,22 @@ export default function HeroVideo() {
           ref={introRef}
           className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
         >
-          <p className="smallcaps text-[11px] text-[#E3A83B] sm:text-xs">
+          <p className="smallcaps text-[11px] text-[#D4A24E] sm:text-xs">
             Beach-side restaurant &amp; bar — Batu Bolong Beach, Canggu
           </p>
-          <h1 className="mt-5 font-display text-5xl font-light leading-none tracking-[0.12em] text-[#FBF6EF] sm:text-7xl md:text-8xl">
+          <h1 className="mt-5 font-display text-5xl font-light leading-none tracking-[0.12em] text-[#F5F1E8] sm:text-7xl md:text-8xl">
             LA ROSA
           </h1>
-          <p className="mt-6 max-w-xl text-sm font-light leading-relaxed text-[#FBF6EF]/75 sm:text-base">
+          <p className="mt-6 max-w-xl text-sm font-light leading-relaxed text-[#F5F1E8]/75 sm:text-base">
             Dinner, drinks and the sunset, feet in the sand. Tom yum
             seafood, nasi goreng, kung pao chicken and a Tequila Sunrise as
             the sun goes down. Open every day, 7am to midnight.
           </p>
           <div className="mt-10 flex flex-col items-center gap-2">
-            <span className="smallcaps text-[10px] text-[#FBF6EF]/60">
+            <span className="smallcaps text-[10px] text-[#F5F1E8]/60">
               Scroll
             </span>
-            <span className="block h-10 w-px bg-gradient-to-b from-[#E3A83B] to-transparent" />
+            <span className="block h-10 w-px bg-gradient-to-b from-[#D4A24E] to-transparent" />
           </div>
         </div>
 
@@ -207,7 +207,7 @@ export default function HeroVideo() {
             }}
             className="hero-line pointer-events-none absolute inset-0 flex items-center justify-center px-6 opacity-0"
           >
-            <h2 className="text-center font-display text-4xl font-light leading-tight tracking-[0.08em] text-[#FBF6EF] [text-shadow:0_2px_30px_rgba(0,0,0,0.85)] sm:text-6xl md:text-7xl">
+            <h2 className="text-center font-display text-4xl font-light leading-tight tracking-[0.08em] text-[#F5F1E8] [text-shadow:0_2px_30px_rgba(0,0,0,0.85)] sm:text-6xl md:text-7xl">
               {line}
             </h2>
           </div>
