@@ -36,14 +36,14 @@ export default function Booking() {
   };
 
   return (
-    <section id="book" className="relative bg-[#FBF6EF] px-5 py-24 sm:px-8 sm:py-32">
+    <section id="book" className="relative bg-[#122E30] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-7xl">
-        <p className="smallcaps text-[11px] text-[#93331F]">Book a table</p>
+        <p className="smallcaps text-[11px] text-[#E3A83B]">Book a table</p>
         <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
-          <h2 className="font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#2B211C] sm:text-5xl">
+          <h2 className="font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#FBF6EF] sm:text-5xl">
             Book a table for sunset
           </h2>
-          <p className="max-w-md text-base text-[#6D5A4E]">
+          <p className="max-w-md text-base text-[#FBF6EF]/75">
             We reply on WhatsApp within the day.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function Booking() {
                 autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#93331F] focus:ring-2 focus:ring-[#93331F]/40"
+                className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#A84A12] focus:ring-2 focus:ring-[#A84A12]/40"
               />
             </div>
 
@@ -91,7 +91,7 @@ export default function Booking() {
                   placeholder="e.g. Friday 14 November"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#93331F] focus:ring-2 focus:ring-[#93331F]/40"
+                  className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#A84A12] focus:ring-2 focus:ring-[#A84A12]/40"
                 />
               </div>
               <div>
@@ -106,13 +106,13 @@ export default function Booking() {
                   placeholder="e.g. 2"
                   value={guests}
                   onChange={(e) => setGuests(e.target.value)}
-                  className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#93331F] focus:ring-2 focus:ring-[#93331F]/40"
+                  className="min-h-[48px] w-full border border-[#E5D3C0] bg-[#FBF6EF] px-3.5 py-3 text-base text-[#2B211C] outline-none focus:border-[#A84A12] focus:ring-2 focus:ring-[#A84A12]/40"
                 />
               </div>
             </div>
 
             {error && (
-              <p role="alert" className="text-sm font-semibold text-[#93331F]">
+              <p role="alert" className="text-sm font-semibold text-[#A84A12]">
                 {error}
               </p>
             )}
@@ -120,7 +120,7 @@ export default function Booking() {
             <div className="mt-2">
               <button
                 type="submit"
-                className="inline-flex min-h-[52px] items-center justify-center bg-[#93331F] px-8 py-3.5 text-base font-bold text-white transition-colors duration-300 hover:bg-[#752713]"
+                className="inline-flex min-h-[52px] items-center justify-center bg-[#A84A12] px-8 py-3.5 text-base font-bold text-white transition-colors duration-300 hover:bg-[#7E3608]"
               >
                 Book on WhatsApp
               </button>
