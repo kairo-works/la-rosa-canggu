@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Custom rose-dot cursor with lerp. Desktop (fine pointer) only —
+ * Custom money-green-dot cursor with lerp. Desktop (fine pointer) only —
  * hidden on touch devices via CSS. The ring lerps toward the pointer;
  * the dot follows instantly.
  */
