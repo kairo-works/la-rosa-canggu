@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "#menu", label: "Menu" },
-  { href: "#about", label: "About" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#visit", label: "Visit" },
+  { href: "/#menu", label: "Menu" },
+  { href: "/about", label: "About" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#visit", label: "Visit" },
 ];
 
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#top" className="flex items-baseline gap-2" aria-label="La Rosa Canggu — home">
+        <a href="/" className="flex items-baseline gap-2" aria-label="La Rosa Canggu — home">
           <span className="flex h-9 w-9 items-center justify-center bg-[#2E9E5B] font-display text-xl font-bold text-[#0A1F16]">
             L
           </span>
@@ -56,7 +56,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#book"
+            href="/#book"
             className="inline-flex min-h-[44px] items-center justify-center bg-[#2E9E5B] px-5 py-2 text-sm font-bold text-white transition-colors duration-300 hover:bg-[#D4A24E] hover:text-[#0A1F16]"
           >
             Book a table
@@ -96,7 +96,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#book"
+            href="/#book"
             onClick={() => setOpen(false)}
             className="mt-4 flex min-h-[52px] items-center justify-center bg-[#2E9E5B] px-5 font-bold text-white transition-colors hover:bg-[#D4A24E] hover:text-[#0A1F16]"
           >
