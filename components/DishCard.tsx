@@ -20,7 +20,7 @@ export default function DishCard({
   alt,
 }: DishCardProps) {
   return (
-    <article className="dish-card group relative h-full overflow-hidden rounded-sm border border-white/10 bg-[#17383B]">
+    <article className="dish-card group relative h-full overflow-hidden rounded-sm border border-white/10 bg-[#143A29]">
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={image}
@@ -39,17 +39,17 @@ export default function DishCard({
 
       <div className="px-6 pb-7 pt-5">
         <div className="flex items-baseline justify-between gap-4">
-          <h3 className="font-display text-2xl font-light tracking-[0.02em] text-[#FBF6EF]">
+          <h3 className="font-display text-2xl font-light tracking-[0.02em] text-[#F5F1E8]">
             {name}
           </h3>
-          <span className="whitespace-nowrap font-display text-xl text-[#E3A83B]">
+          <span className="whitespace-nowrap font-display text-xl text-[#D4A24E]">
             {price}
           </span>
         </div>
-        <p className="mt-3 text-sm font-light leading-relaxed text-[#FBF6EF]/70">
+        <p className="mt-3 text-sm font-light leading-relaxed text-[#F5F1E8]/70">
           {desc}
         </p>
-        <div className="mt-5 h-px w-10 bg-[#E3A83B]/70 transition-all duration-700 ease-out group-hover:w-20" />
+        <div className="mt-5 h-px w-10 bg-[#D4A24E]/70 transition-all duration-700 ease-out group-hover:w-20" />
       </div>
     </article>
   );
