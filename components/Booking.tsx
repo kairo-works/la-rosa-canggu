@@ -39,14 +39,9 @@ export default function Booking() {
     <section id="book" className="relative bg-[#10291F] px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-7xl">
         <p className="smallcaps text-[11px] text-[#D4A24E]">Book a table</p>
-        <div className="mt-4 flex flex-wrap items-baseline justify-between gap-6">
-          <h2 className="font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#F5F1E8] sm:text-5xl">
-            Book a table for sunset
-          </h2>
-          <p className="max-w-md text-base text-[#F5F1E8]/75">
-            We reply on WhatsApp within the day.
-          </p>
-        </div>
+        <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-[0.02em] text-[#F5F1E8] sm:text-5xl">
+          Book a table for sunset
+        </h2>
 
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-2">
           <div className="relative min-h-[320px] w-full overflow-hidden">
@@ -128,10 +123,6 @@ export default function Booking() {
 
             <p role="status" className="min-h-6 text-base font-bold text-[#F5F1E8]">
               {status}
-            </p>
-            <p className="text-sm leading-relaxed text-[#9DB8A6]">
-              Or message us directly on WhatsApp: +62 878-1766-1749. Sunset
-              tables go first — book ahead for the 5–7pm window.
             </p>
           </form>
         </div>
