@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
-import About from "@/components/About";
 import Visit from "@/components/Visit";
 import Gallery from "@/components/Gallery";
 import Booking from "@/components/Booking";
@@ -30,7 +29,6 @@ export default function Home() {
       <Navbar />
       <HeroVideo />
       <Menu />
-      <About />
       <Gallery />
       <Visit />
       <Booking />
