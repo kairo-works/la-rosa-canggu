@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${karla.variable} antialiased bg-[#FBF6EF] text-[#2B211C]`}
+        className={`${playfair.variable} ${karla.variable} antialiased bg-[#0A1F16] text-[#F5F1E8]`}
       >
         {children}
       </body>
