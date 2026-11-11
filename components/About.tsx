@@ -26,7 +26,7 @@ export default function About() {
             nobody dresses up here.
           </p>
           <a
-            href="#gallery"
+            href="/#gallery"
             className="mt-8 inline-block text-base font-bold text-[#F5F1E8] transition-colors hover:text-[#43B581]"
           >
             See the beach and the drinks <span aria-hidden="true">&rarr;</span>
